@@ -6,11 +6,11 @@ title: Accueil
 
 # Bienvenue sur notre Documentation
 
-Bienvenue dans la documentation du projet RATP 2024 (Robot Automatisé Transporteur de Plantes). Ce site a pour but de fournir toutes les informations nécessaires pour comprendre et utiliser efficacement notre projet.
+Bienvenue dans la documentation du projet RATP 2025 (Robot Automatisé Transporteur de Planches). Ce site a pour but de fournir toutes les informations nécessaires pour comprendre et utiliser efficacement notre projet.
 
 ## À propos du Projet
 
-Le projet RATP est motivé par une chose : **participer à la coupe de France de robotique (CDR) 2025** ! Notre équipe est composée de septs étudiants de deuxième année de cycle pré-ingénieur motivés. La CDR exige d'avoir un robot fonctionnel capable de ramasser des plantes de façon autonome et de les déposer dans des zones prédéfinies, pour plus de précisions, vous pouvez consulter [le site de la CDR](https://www.coupederobotique.fr/). 
+Le projet RATP est motivé par une chose : **participer à la coupe de France de robotique (CDR) 2025** ! Notre équipe est composée de quatre étudiants de deuxième année de cycle pré-ingénieur motivés. La CDR exige d'avoir un robot fonctionnel capable de ramasser des planches et des concerves de façon autonome et de construire une structure avec, pour plus de précisions, vous pouvez consulter [le site de la CDR](https://www.coupederobotique.fr/). 
 
 ## Commencer
 Pour débuter avec le projet RATP, consultez notre section [Démarrage rapide](/404).
@@ -62,7 +62,7 @@ Les modifications apportées aux fichiers markdown prendrons automatiquement eff
 </details>
 
 <details markdown="block">
-<summary>Insersion d'images</summary>
+<summary>Insertion d'images</summary>
 
 Pour inserer une image, l'ajouter dans le répertoire `assets` contenu dans `docs` puis créer un chemin semblable à celui de la page courrante.
 
@@ -89,7 +89,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 ```
 
-<img src="assets/index/exemple.png" title="Interface de PlatformIO" width="100%" />
+<img src="assets/index/exemple.png" title="Image d'exemple" width="100%" />
 {: .text-center }
 
 Ces balises pourront être suivie de `{: .text-center }` sur la ligne suivante pour centrer l'image comme suit :

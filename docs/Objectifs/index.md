@@ -1,7 +1,8 @@
 ---
 layout: default
-nav_order: 6
-title: Souvenirs
+title: Objectifs
+nav_order: 2
+has_children: true
 ---
 
 # Inserer votre contenu

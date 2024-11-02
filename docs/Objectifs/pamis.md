@@ -1,7 +1,8 @@
 ---
 layout: default
-nav_order: 6
-title: Souvenirs
+title: PAMIs
+parent: Objectifs
+nav_order: 2
 ---
 
 # Inserer votre contenu

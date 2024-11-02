@@ -5,4 +5,6 @@ parent: PAMIs
 nav_order: 2
 ---
 
-# Electronique
+# Inserer votre contenu
+
+cf [guide markdown](https://www.markdownguide.org/)

@@ -5,4 +5,6 @@ parent: PAMIs
 nav_order: 3
 ---
 
-# Programmation
+# Inserer votre contenu
+
+cf [guide markdown](https://www.markdownguide.org/)

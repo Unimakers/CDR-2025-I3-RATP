@@ -41,9 +41,9 @@ nav_external_links:
 
 # Custom styles
 callouts:
-  # warning:
-  #   title: Warning
-  #   color: red
+  warning:
+    title: Attention
+    color: red
   note:
     title: Note
     color: purple

@@ -2,6 +2,7 @@
 layout: home
 nav_order: 1
 title: Accueil
+has_3dmodel: true
 ---
 
 # Bienvenue sur notre Documentation
@@ -34,37 +35,52 @@ Nous espérons que cette documentation vous aidera à tirer le meilleur parti du
 
 ### Prérequis
 
-- git
-- [Ruby](https://www.ruby-lang.org/fr/documentation/installation/)
+- [git](https://git-scm.com/)
+- [Ruby](https://www.ruby-lang.org/fr/)
+- [make](https://www.gnu.org/software/make/manual/make.html) _(optionnel)_
 
-### Execution
+### Exécution
 
 1. Cloner le répertoire git localement
 ```sh
-git clone https://github.com/Unimakers/CDR-2025-I3-RATP.git
+git clone https://github.com/Unimakers/CDR-2025-I3-RATP.git && cd CDR-2025-I3-RATP
 ```
 
 2. Installer les dépendances à l'aide de bundler
 ```sh
-cd CDR-2025-I3-RATP/docs # On se place dans le répertoire précédemment cloné
+cd docs # On se place dans le répertoire contenant le fichier Gemfile
 bundle install
 ```
 
-3. Executer le site
+3. Exécuter le site
 ```sh
 bundle exec jekyll serve
 ```
 
-4. Ouvrer le navigateur web à l'adresse `http://localhost:4000`
+4. Ouvrer le navigateur web à l'adresse [http://localhost:4000](http://localhost:4000)
 
 Les modifications apportées aux fichiers markdown prendrons automatiquement effet après sauvegarde de ces derniers et rafraichissement de la page.
 
+_Alternativement_, il est possible d'utiliser `make` pour éviter l'utilisation de ces commandes :
+
+```sh
+make setup # Installe les dépendances
+make run # Ou simplement make : Lance le site
+```
+_OU_
+```sh
+make firstrun
+```
+
+Une fois le site lancé, bundle, jekyll et gems génèrent des dossiers et fichiers qui peuvent nuire à la clareté de l'édition. Pour les supprimer facilement, il est possible d'utiliser la commande `make clean` lorsque le site n'est pas en fonctionnement.
+
 </details>
+
 
 <details markdown="block">
 <summary>Insertion d'images</summary>
 
-Pour inserer une image, l'ajouter dans le répertoire `assets` contenu dans `docs` puis créer un chemin semblable à celui de la page courrante.
+Pour insérer une image, l'ajouter dans le répertoire `assets` contenu dans `docs` puis créer un chemin semblable à celui de la page courrante.
 
 __Exemple :__
 
@@ -80,7 +96,7 @@ __Exemple :__
 
     - ...
 
-Les balise html de l'image inserée ci-après :
+Les balises html de l'image inserée ci-après :
 ```markdown
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -102,5 +118,52 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 ```
+
+</details>
+
+
+<details markdown="block">
+<summary>Insertion de modèles 3D</summary>
+
+Pour ajouter un modèle 3D à la page, suivre la même démarche que pour une image. Le format **gltf** est supporté.
+
+{: .warning }
+Penser à ajouter le paramètre `has_3dmodel: true` dans l'entête du document markdown autrement, le modèle ne s'affichera pas !
+
+
+
+Les balises html du modèle inseré ci-après :
+```markdown
+--- <!-- Entête yaml en début de document -->
+layout: default
+nav_order: 1
+title: Exemple
+has_3dmodel: true
+---
+
+<model-viewer title="Servo" src="assets/index/SG90.gltf" shadow-intensity="1" camera-controls touch-action="pan-y" ></model-viewer>
+```
+
+<model-viewer title="Servo" src="assets/index/SG90.gltf" shadow-intensity="1" camera-controls touch-action="pan-y" ></model-viewer>
+
+La taille du cadre sur la page est défini en CSS dans le fichier `_layout/default.html:13-19`. Pour l'ajuster, les paramètres peuvent être écrasés en les ajoutant avant la balise `<model-viewer>` comme suit :
+
+```markdown
+<style>
+    model-viewer {
+        width: 30vw;
+        height: 30vw;
+    }
+</style>
+<model-viewer title="Servo" src="assets/index/SG90.gltf" shadow-intensity="1" camera-controls touch-action="pan-y" ></model-viewer>
+```
+
+Les options utilisées dans `model-viewer`: 
+
+- `shadow-intensity="i"` comme son nom l'indique sert à ajuster l'intensité de l'ombre du modèle.
+- `camera-controls` permet d'activer l'intéraction par l'utilisateur.
+- `touch-action="pan-y|pan-x|none"` dicte l'intéraction tactile par l'utilisateur.
+
+Toutes les options disponibles sont listées et expliquées sur le site [model-viewer](https://modelviewer.dev/docs/index.html) au besoin.
 
 </details>

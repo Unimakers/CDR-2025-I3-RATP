@@ -7,3 +7,5 @@ clean:
 
 setup:
 	cd docs && bundle install
+
+firstrun: setup run

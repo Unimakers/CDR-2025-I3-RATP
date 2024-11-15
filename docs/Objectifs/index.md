@@ -5,6 +5,12 @@ nav_order: 2
 has_children: true
 ---
 
-# Inserer votre contenu
+# Objectifs
 
-cf [guide markdown](https://www.markdownguide.org/)
+Dans cette section seront listé les objectifs de la coupe de France de Robotique 2025.
+
+Seront listés les objectifs du robot principal et des PAMIs sous cette forme :
+
+- Mécanique
+- Électronique
+- Programmation

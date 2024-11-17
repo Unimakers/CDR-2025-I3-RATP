@@ -2,7 +2,7 @@
 layout: home
 nav_order: 1
 title: Accueil
-has_3dmodel: true
+has_model: true
 ---
 
 # Bienvenue sur notre Documentation
@@ -84,9 +84,9 @@ Pour insérer une image, l'ajouter dans le répertoire `assets` contenu dans `do
 
 __Exemple :__
 
-- Si le document édité est `Robot/Programmation/index.md`, le chemin vers l'image sera `../../assets/Robot/Programmation/index/image.png`.
+- Si le document édité est `Robot/Programmation/index.md`, le chemin vers l'image pourra être `../../assets/Robot/Programmation/index/image.png`.
 
-- Le chemin d'accès à l'image est relatif, le répertoire `docs/` est considéré comme étant la racine. Si le document édité se trouve dans un/des sous répertoire(s) de `docs/`, le chemin d'accès relatif à l'image comportera autant de retour de dossier que de sous dossiers dans lesquels se trouve le document :
+- Le chemin d'accès à l'image peut être relatif, le répertoire `docs/` est considéré comme étant la racine. Si le document édité se trouve dans un/des sous répertoire(s) de `docs/`, le chemin d'accès relatif à l'image comportera autant de retour de dossier que de sous dossiers dans lesquels se trouve le document :
     
     - Accès images depuis `docs/` : `assets/{folder_name}/*.png` où `{folder_name}` devra être remplacé par le nom du document. Celui-ci étant index, les images se trouveront dans `assets/index/`. `docs/` est la racine donc le chemin d'accès relatif aux images ne comporte pas de retour de dossier.
 
@@ -95,6 +95,10 @@ __Exemple :__
     - Accès images dans `docs/Robot/Programmation/` : `../../assets/Robot/Programmation/*.png`. `Programmation/` est un sous répertoire de `docs` donc le chemin d'accès relatif à l'image comportera deux retours de dossier.
 
     - ...
+
+- Le chemin d'accès à l'image peut être aussi absolu en utilisant la variable `site.baseurl` comme suit : 
+<img src="{{ site.baseurl }}/assets/index/baseurl.png" title="Variable baseurl" width="50%" /> .
+Le principe de cette méthode est de garder le chemin vers l'image quelque soit l'emplacement du document markdown.
 
 Les balises html de l'image inserée ci-après :
 ```markdown
@@ -128,9 +132,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 Pour ajouter un modèle 3D à la page, suivre la même démarche que pour une image. Le format **gltf** est supporté.
 
 {: .warning }
-Penser à ajouter le paramètre `has_3dmodel: true` dans l'entête du document markdown autrement, le modèle ne s'affichera pas !
-
-
+Penser à ajouter le paramètre `has_model: true` dans l'entête du document markdown autrement, le modèle ne s'affichera pas !
 
 Les balises html du modèle inseré ci-après :
 ```markdown

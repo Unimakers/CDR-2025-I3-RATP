@@ -46,9 +46,11 @@ Le chronomètre de partie permettrait de toujours rester dans le temps imparti d
 
 ## Documentation
 
-Un objectif a aussi été défini pour la documentation : l'implémentation d'une animation pour visualiser le déroulé d'un match. Cette animation aura pour but d'être accessible et flexible. Elle utilisera le moteur P5JS et se basera sur sur le [générateur de stratégie 2024](https://leskaribous.fr/StrategyToolbox/pages/strategy-2024/generateur-2024.html) de l'équipe des Karibous. Un [aperçu de cette animation](https://unimakers.fr/CDR-2024-I2-RATP/Robot/Programmation/Strategie/Strategie.html) peut être trouvé dans la documentation de 2024 de l'équipe RATP.
+La documentation ne fait pas partie directement des objectifs pour le robot, son amélioration fait néanmoins partie des objectifs du projet CDR2025 de l'équipe RATP. L'outils `model-viewer` y a déjà été ajouté pour permettre de visualier des modèles 3D.
 
-L'idéal serait de pouvoir définir autant de robot que possible avec leurs dimensions réelles, leur image et leur stratégie. Des PAMIs pourront aussi être définis. Ci-après un exemple d'utilisation de ce module dans une documentation :
+Un objectif a été défini pour la documentation : l'implémentation d'une animation pour visualiser le déroulé d'un match. Cette animation a pour but d'être accessible et flexible. Elle utilise le moteur P5JS et se base sur sur le [générateur de stratégie 2024](https://leskaribous.fr/StrategyToolbox/pages/strategy-2024/generateur-2024.html) de l'équipe des Karibous. Une [démonstration de cette animation](https://robin864.github.io/CDR_StrategyAnimation/) est disponible sur le Github de Robin864. Dans ce répertoire Github, des fonctionnalités sont à venir, telles que les dimensions et la gestion de l'équipe et de la vitesse de chaque éléments, la durée d'une partie ou encore le support de plusieurs type de fichier de stratégie.
+
+Ci-après un exemple d'utilisation de ce module dans une documentation :
 
 ```html
 <cdr-animation bg="assets/vinyle2024_landscape.png" height="2000" width="3000">
@@ -60,4 +62,4 @@ L'idéal serait de pouvoir définir autant de robot que possible avec leurs dime
 </cdr-animation>
 ```
 
-Cette animation repectera les temps réels d'un match et visera à le reproduire le plus fidèlement possible.
+Cette animation repecte les temps réels d'un match et vise à le reproduire le plus fidèlement possible.

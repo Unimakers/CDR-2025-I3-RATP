@@ -11,3 +11,4 @@ gem "json"
 gem "jekyll-sass-converter"
 
 gem "erb", "~> 4.0"
+gem "github-pages"

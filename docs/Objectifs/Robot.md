@@ -11,11 +11,16 @@ L'objectif principal de l'équipe RATP pour le robot pour la CDR 2025 est d'avoi
 
 ## Mécanique
 
-Objectifs pour la mécanique du robot.
+#### Actionneurs
 
+Cette année, deux types d'actionneurs seront utilisés :
+
+- Actionneur pour le levage de planches en bois : Cet actionneur sera conçu pour soulever une planche en bois grâce à un système d’aspiration. Le principal défi consistera à garantir que la planche reste bien maintenue en toute sécurité pendant son déplacement, sans risque de chute.
+
+- Actionneur pour la manipulation des capsules en aluminium : Cet actionneur aura pour rôle de saisir des capsules en aluminium disposées sur le terrain et de les empiler avec précision.
 ## Électronique
 
-Objectifs pour l'électronique du robot.
+Sur le plan électronique, nous conserverons le PCB utilisé pour la CDR 2024. Cependant, il sera nécessaire d’intégrer un module permettant de réguler la tension utilisée sur la carte. Cela garantira une tension suffisante pour soulever les planches en toute sécurité. Sans cette adaptation, il existe un risque que les planches tombent lors des déplacements.
 
 ## Programmation
 

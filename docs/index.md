@@ -140,7 +140,7 @@ Les balises html du modèle inseré ci-après :
 layout: default
 nav_order: 1
 title: Exemple
-has_3dmodel: true
+has_model: true
 ---
 
 <model-viewer title="Servo" src="assets/index/SG90.gltf" shadow-intensity="1" camera-controls touch-action="pan-y" ></model-viewer>

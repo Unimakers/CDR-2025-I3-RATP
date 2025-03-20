@@ -47,6 +47,8 @@ callouts:
   note:
     title: Note
     color: purple
+  highlight:
+    color: blue
 
 # Diagrams
 mermaid:

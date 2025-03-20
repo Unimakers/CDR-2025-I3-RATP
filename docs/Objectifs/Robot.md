@@ -3,6 +3,7 @@ layout: default
 title: Robot
 parent: Objectifs
 nav_order: 1
+has_model: true
 ---
 
 # Objectifs du Robot
@@ -11,13 +12,39 @@ L'objectif principal de l'équipe RATP pour le robot pour la CDR 2025 est d'avoi
 
 ## Mécanique
 
-#### Actionneurs
+### La base roulante
 
-Cette année, deux types d'actionneurs seront utilisés :
+Pour assurer la mobilité du robot, nous avons opté pour des roues **mécanum**, un choix stratégique qui lui permet de se déplacer librement dans huit directions sans avoir à pivoter sur lui-même. Cette technologie offre une grande agilité et une réactivité accrue, ce qui est particulièrement avantageux dans un environnement où les déplacements doivent être rapides. 
 
-- Actionneur pour le levage de planches en bois : Cet actionneur sera conçu pour soulever une planche en bois grâce à un système d’aspiration. Le principal défi consistera à garantir que la planche reste bien maintenue en toute sécurité pendant son déplacement, sans risque de chute.
+{: .highlight }
+Toutefois, cette flexibilité s’accompagne d’un défi : garantir une précision optimale dans les déplacements.
 
-- Actionneur pour la manipulation des capsules en aluminium : Cet actionneur aura pour rôle de saisir des capsules en aluminium disposées sur le terrain et de les empiler avec précision.
+
+En effet, la gestion de la trajectoire et des ajustements fins nécessite un contrôle rigoureux des moteurs ainsi qu’un algorithme de correction efficace pour éviter les écarts et assurer des mouvements fluides et cohérents.
+
+Concernant la structure du robot, nous avons choisi une conception cubique, ce qui signifie qu’il dispose de quatre faces distinctes pouvant être exploitées stratégiquement. Cette architecture nous permet de répartir les différentes tâches du robot sur chacune de ces faces, maximisant ainsi son efficacité et son autonomie. En assignant une fonction spécifique à chaque face, nous réduisons le nombre de rotations et de repositionnements nécessaires, optimisant ainsi les trajets et minimisant les pertes de temps. Cette approche améliore non seulement la rapidité d’exécution des missions, mais aussi la stabilité et la robustesse du robot dans son environnement opérationnel. Il faut cependant veiller à maintenir un robot fonctionnel tout en respectant les dimensions et les normes imposées par la compétition.
+
+<img src="../assets/index/steppers_location.png" title="RATP2025" width="100%" />
+
+### Les actionneurs
+
+Pour cette édition 2025 de la coupe de france de robotique, nous aurons besoin de 2 type d'actionneurs : 
+- Le premier type d'actionneur, sera des pompes, qui par aspiration, nous permetteront de déplacer les planches. Les enjeux sur ces actionneurs, seront de stabiliser la planches lors du déplacement, afin d'être sur qu'elle ne chute pas lors du déplacement. Ces pompes seront donc reliés à des ventouses, et les ventouses seront levées ou baisssées grâce à un servo moteur, pour soulever ou baisser les planches
+
+<style>
+    model-viewer {
+        width: 49%;
+        height: 20vw;
+        margin-left: 0;
+        margin-right: auto;
+    }
+</style>
+<model-viewer title="Actionneur_planche_pince" src="../assets/index/Version_pince.gltf" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
+<video controls width="49%"><source src="../assets/index/test_proto_ventouses.mp4" type="video/mp4" ></video>
+
+- Le deuxième actionneur, seront des aimants, qui seront montées sur un axe pivotant, ce qui nous permettera ou non d'aimanter les capsules. Lorsque l'ont veur aimanter les pots, le servo moteur fera tourner l'axe afin que les aimants attirent les capsules. Pour les lacher, il faudra faire tourner le servo moteur dans le sens inverse, afin de ne plus aimanter les pots. Il faudra un second servi moteur pour cet actionneur, qui permettera de soulever l'ensemble.
+
 ## Électronique
 
 Sur le plan électronique, nous conserverons le PCB utilisé pour la CDR 2024. Cependant, il sera nécessaire d’intégrer un module permettant de réguler la tension utilisée sur la carte. Cela garantira une tension suffisante pour soulever les planches en toute sécurité. Sans cette adaptation, il existe un risque que les planches tombent lors des déplacements.

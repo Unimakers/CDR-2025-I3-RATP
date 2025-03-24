@@ -31,23 +31,9 @@ Concernant la structure du robot, nous avons choisi une conception cubique, ce q
 Pour cette édition 2025 de la coupe de france de robotique, nous aurons besoin de 2 type d'actionneurs : 
 - Le premier type d'actionneur, sera des pompes, qui par aspiration, nous permetteront de déplacer les planches. Les enjeux sur ces actionneurs, seront de stabiliser la planches lors du déplacement, afin d'être sur qu'elle ne chute pas lors du déplacement. Ces pompes seront donc reliés à des ventouses, et les ventouses seront levées ou baisssées grâce à un servo moteur, pour soulever ou baisser les planches
 
-<style>
-    .layout {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2%;
-    }
+<video width="49%" controls><source src="../assets/index/test_proto_ventouses.mp4" type="video/mp4"></video>
 
-    .layout model-viewer, .layout video {
-        width: 49%;
-    }
-</style>
-
-<div class="layout">
-    <model-viewer title="Actionneur_planche_pince" src="../assets/index/Version_pince.gltf" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-    <video controls><source src="../assets/index/test_proto_ventouses.mp4" type="video/mp4"></video>
-</div>
+<cad-model src="../assets/index/Version_pince.gltf" alt="Actionneur pince planches" width="49%"></cad-model>
 
 - Le deuxième actionneur, seront des aimants, qui seront montées sur un axe pivotant, ce qui nous permettera ou non d'aimanter les capsules. Lorsque l'ont veur aimanter les pots, le servo moteur fera tourner l'axe afin que les aimants attirent les capsules. Pour les lacher, il faudra faire tourner le servo moteur dans le sens inverse, afin de ne plus aimanter les pots. Il faudra un second servi moteur pour cet actionneur, qui permettera de soulever l'ensemble.
 

@@ -10,14 +10,9 @@ layout: table_wrappers
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
   {% if page.has_model == true %}
-    <style>
-      model-viewer {
-        margin: 0 auto;
-        width: 100%;
-        height: 30vh;
-      }
-    </style>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="{{ site.baseurl }}/modules/cad-model/cad-model.css">
+    <script type="module" src="{{ site.baseurl }}/modules/cad-model/cad-model.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   {% endif %}
   {% if page.nav_enabled == true %}
     {% include components/sidebar.html %}

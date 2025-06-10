@@ -13,7 +13,7 @@ nav_order: 1
 
 # Déplacements du robot
 
-Le robot est équipé de 4 moteurs pas à pas en forme de carré. Sur ces moteurs sont montées des roues mécanums : ce sont des roues omnidirectionnelles qui permettent de garder l'orientation du robot quelque soit son déplacement. L'équipe a décidé de reprendre ce système de déplacement issue du robot de l'année précédente afin d'éviter de nouveaux travaux.  
+Le robot est équipé de 4 moteurs pas à pas en forme de carré. Sur ces moteurs sont montées des roues mécanums : ce sont des roues omnidirectionnelles qui permettent de garder l'orientation du robot quelque soit son déplacement. L'équipe a décidé de reprendre ce système de déplacement issue du robot de l'année précédente afin d'éviter de nouveaux travaux.
 
 ## Fonctionnement
 
@@ -25,7 +25,7 @@ Pour résoudre ce problème, nous utilisons les équations cinématiques indépe
 
 | Schéma du robot | Équations correspondantes |
 |:-------------|:------------------|
-<img src="/assets/Robot/Programmation/Deplacements/schema_mecanum.png" title="Schéma géométrie roues mécanum" width="65%" /> | $$a = sin(\alpha + \dfrac{\pi}{4})$$ <br /> $$b = cos(\alpha + \dfrac{\pi}{4})$$ <br /> $$c = -sin(\alpha - \dfrac{\pi}{4})$$ <br /> $$d = cos(\alpha - \dfrac{\pi}{4})$$
+<img src="../../assets/Robot/Programmation/Deplacements/schema_mecanum.png" title="Schéma géométrie roues mécanum" width="65%" /> | $$a = sin(\alpha + \dfrac{\pi}{4})$$ <br /> $$b = cos(\alpha + \dfrac{\pi}{4})$$ <br /> $$c = -sin(\alpha - \dfrac{\pi}{4})$$ <br /> $$d = cos(\alpha - \dfrac{\pi}{4})$$
 
 Des équations ressort un coefficient applicable sur la vitesse, l'acceleration et la distance. Elles permettent aux moteurs pas à pas de terminer leur cycle de mouvement en même temps tout en les déplaçant à des vitesses et des accélérations différentes. Notons qu'il est plus simple de travailler avec un chassis parfaitement carré plutot qu'un chassis rectangulaire.
 

@@ -32,7 +32,7 @@ Le PCA9685 est programmé pour générer un signal PWM à environ 50 Hz, adapté
 
 ### Première face : la bannière
 
-<img src="/assets/Robot/Programmation/Actionneurs/Banniere.png" title="Actionneur bannière" align="center" width="50%" />
+<img src="../../assets/Robot/Programmation/Actionneurs/Banniere.png" title="Actionneur bannière" align="center" width="50%" />
 {: .text-center }
 
 Cette face est équipée d’un unique servo moteur dédié à la levée d’une bannière. Ce mécanisme simple permet de déposer la bannière de l'équipe sur le bord du plateau de jeu. Le servo actionne un bras qui dépose la bannière de manière fluide et contrôlée sur le bord. Cette dernière est déployé en relachant un aimant libéré lors du mouvement du robot.
@@ -47,7 +47,7 @@ void Actuators::downBanner()
 
 ### Deuxième face : les planches
 
-<img src="/assets/Robot/Programmation/Actionneurs/Planches.png" title="Actionneur planches" align="center" width="50%" />
+<img src="../../assets/Robot/Programmation/Actionneurs/Planches.png" title="Actionneur planches" align="center" width="50%" />
 {: .text-center }
 
 Cette face est constituée d'un servo permettant de lever des ventouses qui aspirent de l'air pour tenir les planches. Le mécanisme aspire, décend au niveau de la planche et remonte.
@@ -70,7 +70,7 @@ void Actuators::grabPlanks()
 
 ### Troisième face : conserves centrales
 
-<img src="/assets/Robot/Programmation/Actionneurs/Conserves.png" title="Actionneur conserves" align="center" width="50%" />
+<img src="../../assets/Robot/Programmation/Actionneurs/Conserves.png" title="Actionneur conserves" align="center" width="50%" />
 {: .text-center }
 
 Sur cette face se trouve trois servos.

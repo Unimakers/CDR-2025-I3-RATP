@@ -28,9 +28,11 @@ Puis, il active un protocole de communication appelé **ESP-NOW** pour recevoir 
 
 Pour mieux comprendre le fonctionnement du protocole **ESP-NOW**, vous pouvez consulter la vidéo de démonstration suivante :
 
-https://youtube.com/shorts/jdEfoFnzGrI?feature=share
-
-[![Vidéo Démo ESP-NOW](https://img.youtube.com/vi/<VIDEO_ID>/0.jpg)](https://youtube.com/shorts/jdEfoFnzGrI?feature=share)
+<p align="center">
+    <a href="https://youtube.com/shorts/jdEfoFnzGrI?feature=share">
+        <img src="https://logo-marque.com/wp-content/uploads/2020/04/YouTube-Logo.png" alt="Vidéo Démo ESP-NOW" width="200">
+    </a>
+</p>
 
 
 Une fois qu’il a récupéré ces informations, ce protocole est coupé et le robot joue la stratégie pour remplir son rôle.
@@ -39,6 +41,16 @@ L’avantage de ce protocole est qu’il peut configurer et lancer tous les robo
 
 <p align="center">
     <img src=".\assets\prog.png" alt="Programmation" style="max-width: 100%; height: auto;">
+</p>
+
+#### Vidéo Fin de Partie
+
+Voici à quoi ressemblait une fin de partie avec le lancement des robots PAMI :
+
+<p align="center">
+    <a href="https://youtu.be/JNDs_sdHCo8">
+        <img src="https://logo-marque.com/wp-content/uploads/2020/04/YouTube-Logo.png" alt="Vidéo Fin de Partie" width="200">
+    </a>
 </p>
 
 ---
